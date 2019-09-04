@@ -1,0 +1,26 @@
+<h3> Server Addition </h3>
+<div class="cointainer">
+  <div class="column">
+  <hr>
+  <label>Server name</label>
+  <input 
+    type="text" 
+    class = "form-control"
+    id = "es"
+    placeholder = "Enter Server"
+    (input)="onEnterServer($event)">
+
+  <button 
+     class="btn btn-primary"
+     (click)= "onAddServer()"
+     [disabled] = "!serverButton"> Add Servers </button>
+     <p></p>
+    <p> {{ serverStatus }} </p>
+    <p>{{ serverName}}</p>
+   
+  </div>
+</div>
+
+
+
+

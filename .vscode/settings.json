@@ -1,0 +1,6 @@
+{
+  "html.format.indentInnerHtml": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.formatOnPaste": true
+}
