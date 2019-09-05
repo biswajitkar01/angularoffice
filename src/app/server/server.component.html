@@ -3,17 +3,24 @@
   <div class="column">
   <hr>
   <label>Server name</label>
-  <input 
+  <!-- <input 
     type="text" 
     class = "form-control"
     id = "es"
     placeholder = "Enter Server"
-    (input)="onEnterServer($event)">
+    (input)="onEnterServer($event)"> -->
+
+  <input         
+    type="text" 
+    class = "form-control"
+    id = "es"
+    placeholder = "Enter Server"
+    [(ngModel)]='serverName'>
 
   <button 
      class="btn btn-primary"
      (click)= "onAddServer()"
-     [disabled] = "!serverButton"> Add Servers </button>
+     [disabled] = "serverName === ''"> Add Servers </button>
      <p></p>
     <p> {{ serverStatus }} </p>
     <p>{{ serverName}}</p>

@@ -16,13 +16,17 @@ export class ServerComponent {
     setTimeout(() => {
       this.serverStatus = "No server Added!!";
     }, 2000);
+    // if (this.serverName === "") {
+    //   this.serverButton = false;
   }
 
   onAddServer() {
-    this.serverStatus = ["server added-->" + this.serverName];
-    this.serverName = this.serverName;
+    this.serverStatus = "server added-->" + this.serverName;
+    this.serverName = "";
+    // this.serverName = this.serverName;
   }
-  onEnterServer(event: any) {
-    this.serverName = event.target.value;
-  }
+  // onEnterServer() {
+  //   return (this.serverButton = true);
+  //   // this.serverName = event.value;
+  // }
 }
