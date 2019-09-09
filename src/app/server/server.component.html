@@ -21,10 +21,22 @@
      class="btn btn-primary"
      (click)= "onAddServer()"
      [disabled] = "serverName === ''"> Add Servers </button>
-     <p></p>
-    <p> {{ serverStatus }} </p>
-    <p>{{ serverName}}</p>
-   
+    <p *ngIf="serverCreated; else noServer"> </p>
+    
+        <p *ngFor="let server of serverss">  
+            Server was created, server name is {{ server }}
+       </p>
+     
+     <ng-template #noServer>
+        <p>No server created</p>  
+     </ng-template>
+
+    <p 
+      [ngStyle] = "{backgroundColor: getColor()}"
+      [ngClass] = "{'online' : serverStatus === 'online'}">
+        {{serverStatus}}
+    </p>
+
   </div>
 </div>
 
